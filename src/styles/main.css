@@ -1,0 +1,350 @@
+/* Estilos generales */
+#root {
+  margin-bottom: 60px; 
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Altura completa de la ventana */
+  overflow-y: scroll;
+}
+
+.app-container {
+  background-color: #fff; 
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.dark-app-container {
+  background-color: #af9d9d; /* Color de fondo en modo oscuro */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center; 
+}
+
+/* Estilos de tarjetas */
+.card-container{
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f5ebeb;
+  width: 210px;
+  height: 300px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.card h3 {
+  font-size: 1.0em; /* Tamaño del texto */
+  color: #333; /* Color del texto */
+  margin-bottom: 8px; /* Espacio inferior */
+}
+
+.card p {
+  font-size: 1em;
+  color: #666;
+}
+
+.card-image-container {
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos del detalle */
+.card-detail {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f5ebeb;
+  width: 290px;
+  height: 400px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-detail:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.card-detail h3 {
+  font-size: 1.0em; /* Tamaño del texto */
+  color: #333; /* Color del texto */
+  margin-bottom: 8px; /* Espacio inferior */
+}
+
+.card-detail p {
+  font-size: 1em;
+  color: #666;
+}
+
+.card-detail-image-container {
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.dark-mode-detail {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: #333;
+  width: 290px;
+  height: 400px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode-detail p {
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+/* Estilos para el Navbar */
+.navbar {
+  background-color: #fdfeff;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  color: #040303;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+/* Estilo de letra diferente */
+.nav-item a {
+  color: #040303;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+  color: #ffcc00; /* Cambia el color al pasar el mouse sobre el enlace */
+}
+
+.nav-item button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item button:hover {
+  color: #ffcc00; /* Cambia el color al pasar el mouse sobre el botón */
+}
+
+.footer {
+  background-color: #fdfeff; 
+  color: #070000; 
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 5px solid #dc3545;
+}
+
+/* Estilos específicos para modo oscuro */
+.dark-mode {
+  background-color: #473131; /* Color de fondo en modo oscuro */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Sombra en modo oscuro */
+}
+
+.dark-mode h3{
+  color: #ddd;
+}
+
+.dark-mode p {
+   color: #e5dddd;
+}
+
+.dark-mode {
+  background-color: #333; 
+  color: #fff; 
+}
+
+.navbar-dark {
+  background-color: #333;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-dark {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+
+.nav-list-dark {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item-dark {
+  margin-right: 15px;
+}
+/* Estilo de letra diferente */
+.nav-item-dark a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item-dark a:hover {
+  color: #ffcc00; /* Cambia el color al pasar el mouse sobre el enlace */
+}
+
+.nav-item-dark button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Estilos del formulario de contacto */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  display: block;
+}
+
+.form-input,
+.form-textarea {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.form-container-dark {
+  background: #333;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container-dark .form-input,
+.form-container-dark .form-textarea {
+  color: #fff;
+}

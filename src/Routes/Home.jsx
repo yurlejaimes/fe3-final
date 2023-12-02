@@ -1,17 +1,33 @@
-import React from 'react'
-import Card from '../Components/Card'
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import React, { useEffect, useState } from 'react';
+import { useGlobalContext } from '../Components/context/global.context';
+import Card from '../Components/Card';
 
 const Home = () => {
-  return (
-    <main className="" >
-      <h1>Home</h1>
-      <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
-      </div>
-    </main>
-  )
-}
+  const [users, setUsers] = useState([]);
+  const { state } = useGlobalContext();
+  useEffect(() => {
+    // Lógica para obtener datos de la API y actualizar 'users'
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((data) => setUsers(data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
 
-export default Home
+  const bodyClass = `${state.darkMode ? 'dark-app-container' : 'app-container'}`;
+
+  return (
+    <div className={bodyClass}>
+    <div className="card-container">
+      <h2>Odontologos</h2>
+      <div>
+        {users.map((user) => (
+          <Card key={user.id} user={user} />
+        ))}
+      </div>
+    </div>
+    </div>
+  );
+ 
+};
+
+export default Home;

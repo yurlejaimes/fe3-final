@@ -1,18 +1,22 @@
-import React from "react";
-import Card from "../Components/Card";
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import React from 'react';
+import { useGlobalContext } from '../Components/context/global.context';
+import Card from '../Components/Card';
 
 const Favs = () => {
+  const { state } = useGlobalContext();
+  const bodyClass = `${state.darkMode ? 'dark-app-container' : 'app-container'}`;
 
   return (
-    <>
-      <h1>Dentists Favs</h1>
-      <div className="card-grid">
-        {/* este componente debe consumir los destacados del localStorage */}
-        {/* Deberan renderizar una Card por cada uno de ellos */}
+    <div className={bodyClass}>
+    <div>
+      <h2>Favoritos</h2>
+      <div className="card-container">
+        {state.favorites.map((user) => (
+          <Card key={user.id} user={user} />
+        ))}
       </div>
-    </>
+    </div>
+    </div>
   );
 };
 

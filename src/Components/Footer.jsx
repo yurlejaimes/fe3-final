@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { useGlobalContext } from './context/global.context';
 
 const Footer = () => {
-  return (
-    <footer>
-        <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
-    </footer>
-  )
-}
+  const { state } = useGlobalContext();
+  const footerClassName = `footer ${state.darkMode ? 'dark-mode' : 'footer'}`;
 
-export default Footer
+  return (
+    <footer className={footerClassName}>
+      <p>© DH 2023 Yurle Jaimes. Todos los derechos reservados.</p>
+    </footer>
+  );
+};
+
+export default Footer;
